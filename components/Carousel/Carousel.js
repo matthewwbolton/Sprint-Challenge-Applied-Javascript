@@ -38,25 +38,33 @@ function carousel () {
 
   carousel.append(leftBtn, img1, img2, img3, img4, rightBtn);
 
-
-
   leftBtn.addEventListener('click', (e) => {
       console.log(e.target);
+      // for (let i = 0; i < imgArr.length; i++){
+      //   imgArr[i].style.display = 'none'
+      // }
+      // slideIndex--;
+      // if (slideIndex > imgArr.length){
+      //   slideIndex = 1
+      // }
+      // imgArr[slideIndex - 1].style.display = 'block';
      
-     
+
   })
-      
-    
-      
-      
-  
       
   rightBtn.addEventListener('click', (e) => {
     console.log(e.target);
+    for (let i = 0; i < imgArr.length; i++){
+      imgArr[i].style.display = 'none'
+    }
+    slideIndex++;
+    if (slideIndex > imgArr.length){
+      slideIndex = 1
+    }
+    imgArr[slideIndex - 1].style.display = 'block';
+
   
-  }
-    
-  )
+  })
 
   return carousel;
 
@@ -67,9 +75,21 @@ carouselContainer.append(carousel());
 
 const images = document.getElementsByTagName('img');
 const imgArr = Array.from(images);
-console.log(images);
-console.log(imgArr);
-console.log(imgArr[0]);
+
+
+let slideIndex = 0;
+
+
+
+// console.log(images);
+// console.log(imgArr);
+// console.log(imgArr[0]);
+
+// currentImg += 1;
+//       if (currentImg >= imgArr.length){
+//         currentImg = 0;
+//       }
+//       imgArr[currentImage].style.display = 'block';
 
 
 
