@@ -40,14 +40,14 @@ function carousel () {
 
   leftBtn.addEventListener('click', (e) => {
       console.log(e.target);
-      // for (let i = 0; i < imgArr.length; i++){
-      //   imgArr[i].style.display = 'none'
-      // }
-      // slideIndex--;
-      // if (slideIndex > imgArr.length){
-      //   slideIndex = 1
-      // }
-      // imgArr[slideIndex - 1].style.display = 'block';
+      for (let i = 0; i < imgArr.length; i++){
+        imgArr[i].style.display = 'none'
+      }
+      slideIndex--;
+      if (slideIndex <= 0){
+        slideIndex = 1
+      }
+      imgArr[slideIndex - 1].style.display = 'block';
      
 
   })
