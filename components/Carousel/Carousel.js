@@ -48,8 +48,8 @@ function carousel () {
         slideIndex = 4
       }
       imgArr[slideIndex - 1].style.display = 'block';
-     
-
+      
+  
   })
       
   rightBtn.addEventListener('click', (e) => {
@@ -62,7 +62,6 @@ function carousel () {
       slideIndex = 1
     }
     imgArr[slideIndex - 1].style.display = 'block';
-
   
   })
 
@@ -78,6 +77,8 @@ const imgArr = Array.from(images);
 
 
 let slideIndex = 0;
+
+
 
 
 
