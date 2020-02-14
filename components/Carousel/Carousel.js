@@ -45,7 +45,7 @@ function carousel () {
       }
       slideIndex--;
       if (slideIndex <= 0){
-        slideIndex = 1
+        slideIndex = 4
       }
       imgArr[slideIndex - 1].style.display = 'block';
      
